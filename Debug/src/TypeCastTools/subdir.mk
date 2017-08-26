@@ -4,17 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/testMain.c 
+../src/TypeCastTools/TypeCastTools.c 
 
 OBJS += \
-./src/testMain.o 
+./src/TypeCastTools/TypeCastTools.o 
 
 C_DEPS += \
-./src/testMain.d 
+./src/TypeCastTools/TypeCastTools.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-src/%.o: ../src/%.c
+src/TypeCastTools/%.o: ../src/TypeCastTools/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C Compiler'
 	gcc -I"/Users/lindechang/Documents/workspace/C_Utils/inc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
